@@ -1,0 +1,33 @@
+.Header {
+  align-items: center;
+  border: solid 1px red;
+  display: flex;
+  flex-direction: row;
+  height: 10%;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.title {
+  font-size: 35px;
+  margin-left: 4%;
+  width: 220px;
+}
+
+.nav-btns {
+  display: flex;
+  height: 50%;
+  justify-content: space-evenly;
+  margin-right: 1%;
+  width: 360px;
+
+}
+
+.random-btn,
+.saved-advice-btn {
+  cursor: pointer;
+  font-size: 20px;
+  height: 100%;
+  width: 160px;
+}
+
