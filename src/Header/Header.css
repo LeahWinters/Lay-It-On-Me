@@ -3,8 +3,8 @@
   border: solid 1px red;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   height: 10%;
+  justify-content: space-between;
   width: 100vw;
 }
 
@@ -16,8 +16,8 @@
 
 .nav-btns {
   display: flex;
-  justify-content: space-evenly;
   height: 50%;
+  justify-content: space-evenly;
   margin-right: 1%;
   width: 360px;
 
@@ -31,6 +31,3 @@
   width: 160px;
 }
 
-/* .saved-advice-btn {
-  height: 100%;
-} */
