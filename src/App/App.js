@@ -20,12 +20,12 @@ class App extends Component {
           <Switch>
             <Route 
               path="/results"
-              component={() => {
+              component={() => (
                 <div className="results-page">
                   <Header />
                   <AdviceContainer />
                 </div>
-              }}
+              )}
             />
             <Route
               exact path="/"
