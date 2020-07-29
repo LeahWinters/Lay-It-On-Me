@@ -21,12 +21,13 @@ class App extends Component {
               component={() => (
                 <div className="search-page">
                   <Header />
+                  <h1>this is my app</h1>
                 </div>
               )}
             />
           </Switch>
         </BrowserRouter>
-        <h1>this is my app</h1>
+
       </div>
     )
   }

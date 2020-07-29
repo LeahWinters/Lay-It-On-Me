@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Header.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Header.css";
 
 const Header = () => {
   return (
@@ -8,27 +8,29 @@ const Header = () => {
       <Link to="/">
         <h1 className="title">Lay It On Me</h1>
       </Link>
-     
-      <Link to="/random">
-        <button 
-          className="random-btn"
-          type="button"
-          aria-label="random button"
-        >
-          Random Advice
-        </button>
-      </Link>
-      <Link to="/my_saved_advice">
-        <button 
-          className="saved-advice-btn"
-          type="button"
-          aria-label="saved advice button"
-        >
-          Saved Advice
-        </button>
-      </Link>
+
+      <section className="nav-btns">
+        <Link to="/random">
+          <button
+            className="random-btn"
+            type="button"
+            aria-label="random button"
+          >
+            Random Advice
+          </button>
+        </Link>
+        <Link to="/my_saved_advice">
+          <button
+            className="saved-advice-btn"
+            type="button"
+            aria-label="saved advice button"
+          >
+            Saved Advice
+          </button>
+        </Link>
+      </section>
     </div>
-  )
-}
+  );
+};
 
 export default Header;
