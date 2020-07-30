@@ -1,0 +1,9 @@
+.advice-container {
+  border: solid 1px orange;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+}
