@@ -38,7 +38,6 @@ class SearchForm extends Component {
               className="submit-search-btn"
               onClick={this.handleSubmit}
               type="button"
-              // disabled={!buttonsEnabled}
             >
               Lay It On Me!
             </button>
