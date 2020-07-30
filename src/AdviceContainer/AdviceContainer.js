@@ -2,9 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./AdviceContainer.css";
 
-const AdviceContainer = () => {
+const AdviceContainer = ({searchedAdvice}) => {
+  const arrayToDisplay = searchedAdvice.map(slip => {
+    return (<p>{slip.advice}</p>)
+  })
+
+  console.log(searchedAdvice)
   return (
-    <p>Advice container</p>
+  <div>{arrayToDisplay}</div>
   )
 }
 
