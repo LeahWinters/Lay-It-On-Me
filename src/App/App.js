@@ -5,6 +5,7 @@ import './App.css';
 import Header from '../Header/Header';
 import SearchForm from '../SearchForm/SearchForm';
 import AdviceContainer from '../AdviceContainer/AdviceContainer';
+import RandomAdvice from "../RandomAdvice/RandomAdvice";
 
 class App extends Component {
   constructor() {
@@ -30,8 +31,10 @@ class App extends Component {
             <Route 
               path="/random_advice"
               component={() => (
-                <Header />
-                
+                <div className="random-advice-page">
+                  <Header />
+                  <RandomAdvice />
+                </div>
               )}
             />
             <Route 
