@@ -10,7 +10,7 @@ const Header = () => {
       </Link>
 
       <section className="nav-btns">
-        <Link to="/random">
+        <Link to="/random_advice">
           <button
             className="random-btn"
             type="button"
