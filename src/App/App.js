@@ -28,6 +28,13 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route 
+              path="/random_advice"
+              component={() => (
+                <Header />
+                
+              )}
+            />
+            <Route 
               path="/results"
               component={() => (
                 <div className="results-page">
