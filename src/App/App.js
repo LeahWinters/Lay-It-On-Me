@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route, BrowserRouter } from "react-router-dom";
-import { getSearchResults } from '../apiCalls'
+import { getSearchResults, getRandomAdvice } from '../apiCalls'
 import './App.css';
 import Header from '../Header/Header';
 import SearchForm from '../SearchForm/SearchForm';
@@ -14,13 +14,18 @@ class App extends Component {
       searchedAdvice: [],
       currentPage: 'home',
       error: '',
+      randomAdvice: {}
     }
   }
 
   grabSearchedResults = async (searchValue) => {
-      const foundResults = await getSearchResults(searchValue);
-      this.setState({searchedAdvice: foundResults.slips, currentPage: 'results'});
-   
+    const foundResults = await getSearchResults(searchValue);
+    this.setState({searchedAdvice: foundResults.slips, currentPage: 'results'});
+  }
+
+  grabRandomAdvice = async () => {
+    const randomAdvice = await getRandomAdvice();
+    this.setState({...this.state, randomAdvice: randomAdvice, currentPage: 'random'});
   }
 
   render() {
