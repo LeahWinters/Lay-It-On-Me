@@ -14,13 +14,18 @@ class App extends Component {
       searchedAdvice: [],
       currentPage: 'home',
       error: '',
-      // randomAdvice: {}
+      savedAdvice: []
     }
   }
 
   grabSearchedResults = async (searchValue) => {
     const foundResults = await getSearchResults(searchValue);
     this.setState({searchedAdvice: foundResults.slips, currentPage: 'results'});
+  }
+
+  saveAdvice = (obj) => {
+    const adviceToSave = this.state.savedAdvice.push(obj);
+    console.log('app', this.state.savedAdvice);
   }
 
 
@@ -45,7 +50,10 @@ class App extends Component {
               component={() => (
                 <div className="results-page">
                   <Header />
-                  <AdviceContainer searchedAdvice={ this.state.searchedAdvice }/>
+                  <AdviceContainer 
+                    searchedAdvice={ this.state.searchedAdvice }
+                    saveAdvice={ this.saveAdvice }
+                  />
                 </div>
               )}
             />
