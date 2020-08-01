@@ -1,0 +1,33 @@
+.saved-advice-card {
+  align-items: center;
+  background-color: #CF995F;
+  border: solid 2px #003249;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 2%;
+  max-height: 300px;
+  width: 500px;
+}
+
+.advice {
+  color: #003249;
+  font-size: 23px;
+  width: 400px;
+}
+
+.delete-saved-btn {
+  background-color: #628395;
+  border-radius: 7px;
+  border-color: #003249;
+  cursor: pointer;
+  color: #F5F5F5;
+  font-size: 18px;
+  padding: 1.5%;
+}
+
+.delete-saved-btn:hover {
+  background-color: #DFD5A5;
+  color: #003249;
+}

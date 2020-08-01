@@ -1,0 +1,9 @@
+.saved-advice-container {
+  background-color: #96897B;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+}
