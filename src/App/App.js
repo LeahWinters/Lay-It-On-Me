@@ -30,7 +30,10 @@ class App extends Component {
   }
 
   deleteSavedAdvice = (obj) => {
-    console.log(obj)
+    const updatedSavedAdvice = this.state.savedAdvice.filter(advice => {
+      return advice !== obj
+    })
+    this.setState({savedAdvice: updatedSavedAdvice})
   }
 
 
