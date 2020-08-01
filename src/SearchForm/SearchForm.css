@@ -1,20 +1,27 @@
 .SearchForm {
+  background-color: #96897B;
   display: flex;
   justify-content: center;
+  height: 100vh;
 }
 
 .search-form {
-  justify-content: center;
+  background-color: #CF995F;
   display: flex;
-  border: solid 1px black;
+  border: solid 2px #003249;
+  border-radius: 7px;
   flex-direction: column;
   height: 400px;
+  justify-content: center;
   margin-top: 10%;
   width: 500px;
 }
 
 .search-input {
   align-self: center;
+  background-color: #F5F5F5;
+  border-radius: 7px;
+  border-color: #003249;
   font-size: 20px;
   height: 10%;
   padding-left: 2%;
@@ -23,8 +30,18 @@
 
 .submit-search-btn {
   align-self: center;
+  background-color: #628395;
+  border-radius: 7px;
+  border-color: #003249;
+  cursor: pointer;
+  color: #F5F5F5;
   font-size: 18px;
   margin-top: 2%;
   padding: 2% 0;
   width: 40%;
+}
+
+.submit-search-btn:hover {
+  background-color: #DFD5A5;
+  color: #003249;
 }

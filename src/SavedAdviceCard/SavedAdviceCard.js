@@ -7,7 +7,7 @@ const SavedAdviceCard = ({ advice, deleteSavedAdvice, slip }) => {
     <section className="saved-advice-card">
       <h4 className="advice">{advice}</h4>
       <button 
-        className="add-fav-btn"
+        className="delete-saved-btn"
         type="button"
         onClick={() => deleteSavedAdvice(slip)}
       >
