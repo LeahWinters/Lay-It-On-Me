@@ -6,6 +6,7 @@ import Header from '../Header/Header';
 import SearchForm from '../SearchForm/SearchForm';
 import AdviceContainer from '../AdviceContainer/AdviceContainer';
 import RandomAdvice from "../RandomAdvice/RandomAdvice";
+import SavedAdviceContainer from '../SavedAdviceContainer/SavedAdviceContainer';
 
 class App extends Component {
   constructor() {
@@ -14,7 +15,7 @@ class App extends Component {
       searchedAdvice: [],
       currentPage: 'home',
       error: '',
-      // randomAdvice: {}
+      savedAdvice: []
     }
   }
 
@@ -23,12 +24,36 @@ class App extends Component {
     this.setState({searchedAdvice: foundResults.slips, currentPage: 'results'});
   }
 
+  saveAdvice = (obj) => {
+    const adviceToSave = this.state.savedAdvice.push(obj);
+    console.log('app', this.state.savedAdvice);
+  }
+
+  deleteSavedAdvice = (obj) => {
+    const updatedSavedAdvice = this.state.savedAdvice.filter(advice => {
+      return advice !== obj
+    })
+    this.setState({savedAdvice: updatedSavedAdvice})
+  }
+
 
   render() {
     return (
       <div className="App">
         <BrowserRouter>
           <Switch>
+            <Route 
+              path="/saved_advice"
+              component={() => (
+                <div className="saved-advice-page">
+                  <Header />
+                  <SavedAdviceContainer 
+                    savedAdvice={this.state.savedAdvice}
+                    deleteSavedAdvice={this.deleteSavedAdvice}
+                  />
+                </div>
+              )}
+            />
             <Route 
               path="/random_advice"
               component={() => (
@@ -45,7 +70,10 @@ class App extends Component {
               component={() => (
                 <div className="results-page">
                   <Header />
-                  <AdviceContainer searchedAdvice={ this.state.searchedAdvice }/>
+                  <AdviceContainer 
+                    searchedAdvice={ this.state.searchedAdvice }
+                    saveAdvice={ this.saveAdvice }
+                  />
                 </div>
               )}
             />
