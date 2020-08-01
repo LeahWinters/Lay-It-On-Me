@@ -23,14 +23,12 @@ class SearchForm extends Component {
   };
 
   render() {
-    if (this.props.searchedAdvice.length > 0 && this.props.currentPage === 'results') {
+    if (this.props.searchedAdvice === undefined) {
+      this.state.error = true
+    } else if (this.props.searchedAdvice.length > 0 && this.props.currentPage === 'results') {
       return <Redirect to="/results" />;
     } 
-    // else if (this.props.searchedAdvice.length > 0 && this.props.currentPage === 'home') {
-    //   return <Redirect to="/" />;
-    // } else {
-    //   this.setState({ ...this.state, error: true});
-    // }
+
 
     return (
       <div className="SearchForm">
@@ -50,7 +48,7 @@ class SearchForm extends Component {
           >
             Lay It On Me!
           </button>
-          { this.state.error && <p className="results-error">Sorry! Please try searching a different word!</p> }
+          { this.state.error && <div><h2>Sorry, I can't help with that</h2></div> }
         </form>
       </div>
     );
