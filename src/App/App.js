@@ -14,7 +14,7 @@ class App extends Component {
       searchedAdvice: [],
       currentPage: 'home',
       error: '',
-      randomAdvice: {}
+      // randomAdvice: {}
     }
   }
 
@@ -23,10 +23,6 @@ class App extends Component {
     this.setState({searchedAdvice: foundResults.slips, currentPage: 'results'});
   }
 
-  grabRandomAdvice = async () => {
-    const randomAdvice = await getRandomAdvice();
-    this.setState({...this.state, randomAdvice: randomAdvice, currentPage: 'random'});
-  }
 
   render() {
     return (
@@ -38,7 +34,9 @@ class App extends Component {
               component={() => (
                 <div className="random-advice-page">
                   <Header />
-                  <RandomAdvice />
+                  <RandomAdvice 
+                    grabRandomAdvice= {this.grabRandomAdvice}
+                  />
                 </div>
               )}
             />
@@ -47,7 +45,7 @@ class App extends Component {
               component={() => (
                 <div className="results-page">
                   <Header />
-                  <AdviceContainer searchedAdvice={this.state.searchedAdvice}/>
+                  <AdviceContainer searchedAdvice={ this.state.searchedAdvice }/>
                 </div>
               )}
             />

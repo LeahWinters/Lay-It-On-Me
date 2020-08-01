@@ -1,10 +1,35 @@
-import React from "react";
+import React, { Component } from "react";
+import { getRandomAdvice } from '../apiCalls'
 import "./RandomAdvice.css";
 
-const RandomAdvice = () => {
-  return (
-    <p>Random Advice Page</p>
-  )
+class RandomAdvice extends Component {
+  constructor() {
+    super();
+    this.state = {
+      random: {advice:'loading'}
+    }
+  }
+
+  componentDidMount = () => {
+    this.grabRandomAdvice()
+  }
+
+  grabRandomAdvice = async () => {
+    const randomAdvice = await getRandomAdvice();
+    this.setState({random: randomAdvice})
+    return randomAdvice
+  }
+
+  render() {
+    console.log(this.state)
+    return (
+      <div>
+        {this.state.random.advice || this.state.random.slip.advice}
+      </div>
+    )
+  }
+
+  
 }
 
 export default RandomAdvice
