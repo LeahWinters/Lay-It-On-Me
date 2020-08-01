@@ -1,22 +1,23 @@
 import React from "react";
 import "./SavedAdviceContainer.css";
-import AdviceCard from "../AdviceCard/AdviceCard";
+import SavedAdviceCard from "../SavedAdviceCard/SavedAdviceCard";
 
 const SavedAdviceContainer = ({ deleteSavedAdvice, savedAdvice }) => {
-  const arrayToDisplay = searchedAdvice.map((slip) => {
+  const arrayToDisplay = savedAdvice.map((slip) => {
     return (
-      <AdviceCard 
+      <SavedAdviceCard 
         advice={slip.advice} 
         id={slip.id}
         key={slip.id}
-        saveAdvice={saveAdvice}
+        savedAdvice={savedAdvice}
+        deleteSavedAdvice={deleteSavedAdvice}
         slip={slip}
       />
     );
   });
 
   return (
-    <section className="advice-container">
+    <section className="saved-advice-container">
       {arrayToDisplay}
     </section>
   );

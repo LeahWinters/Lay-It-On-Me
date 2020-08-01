@@ -19,7 +19,7 @@ const Header = () => {
             Random Advice
           </button>
         </Link>
-        <Link to="/my_saved_advice">
+        <Link to="/saved_advice">
           <button
             className="saved-advice-btn"
             type="button"
