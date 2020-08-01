@@ -15,12 +15,22 @@ const SavedAdviceContainer = ({ deleteSavedAdvice, savedAdvice }) => {
       />
     );
   });
+  
+  if (savedAdvice.length === 0) {
+    return (
+      <section className="saved-advice-container">
+        <p>You have not saved any advice yet! When you do, you will see them here</p>
+      </section>
+    )
+  } else {
+    return (
+      <section className="saved-advice-container">
+        {arrayToDisplay}
+      </section>
+    );
+  }
 
-  return (
-    <section className="saved-advice-container">
-      {arrayToDisplay}
-    </section>
-  );
+  
 };
 
 export default SavedAdviceContainer;
