@@ -1,5 +1,5 @@
 .advice-container {
-  border: solid 1px orange;
+  background-color: #96897B;
   display: flex;
   justify-content: center;
   flex-direction: row;

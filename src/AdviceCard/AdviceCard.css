@@ -1,8 +1,10 @@
 .advice-card {
-  border: solid 1px black;
+  align-items: center;
+  background-color: #CF995F;
+  border: solid 2px #003249;
+  border-radius: 7px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-evenly;
   margin: 2%;
   max-height: 300px;
@@ -10,11 +12,22 @@
 }
 
 .advice {
+  color: #003249;
   font-size: 20px;
   width: 400px;
 }
 
 .add-fav-btn {
+  background-color: #628395;
+  border-radius: 7px;
+  border-color: #003249;
   cursor: pointer;
+  color: #F5F5F5;
   font-size: 18px;
+  padding: 1.5%;
+}
+
+.add-fav-btn:hover {
+  background-color: #DFD5A5;
+  color: #003249;
 }
