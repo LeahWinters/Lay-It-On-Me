@@ -21,9 +21,8 @@ class RandomAdvice extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
-      <div>
+      <div className="random">
         {this.state.random.advice || this.state.random.slip.advice}
       </div>
     )

@@ -7,3 +7,8 @@
   width: 100vw;
   height: 100vh;
 }
+
+.add-save-message {
+  font-size: 27px;
+  margin-top: 26%;
+}
