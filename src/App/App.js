@@ -6,6 +6,7 @@ import Header from '../Header/Header';
 import SearchForm from '../SearchForm/SearchForm';
 import AdviceContainer from '../AdviceContainer/AdviceContainer';
 import RandomAdvice from "../RandomAdvice/RandomAdvice";
+import SavedAdviceContainer from '../SavedAdviceContainer/SavedAdviceContainer';
 
 class App extends Component {
   constructor() {
@@ -28,12 +29,28 @@ class App extends Component {
     console.log('app', this.state.savedAdvice);
   }
 
+  deleteSavedAdvice = (obj) => {
+    
+  }
+
 
   render() {
     return (
       <div className="App">
         <BrowserRouter>
           <Switch>
+            <Route 
+              path="/saved_advice"
+              component={() => (
+                <div className="saved-advice-page">
+                  <Header />
+                  <SavedAdviceContainer 
+                    savedAdvice={this.state.savedAdvice}
+                    deleteSavedAdvice={this.deleteSavedAdvice}
+                  />
+                </div>
+              )}
+            />
             <Route 
               path="/random_advice"
               component={() => (
