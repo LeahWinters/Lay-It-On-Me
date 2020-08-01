@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "./SearchForm.css";
 import { Redirect } from "react-router-dom";
 
@@ -28,7 +27,6 @@ class SearchForm extends Component {
     } else if (this.props.searchedAdvice.length > 0 && this.props.currentPage === 'results') {
       return <Redirect to="/results" />;
     } 
-
 
     return (
       <div className="SearchForm">
