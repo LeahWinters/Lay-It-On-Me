@@ -7,10 +7,7 @@ describe("SearchForm", () => {
   it("Should display a form with an input and a submit button", () => {
     const { getByText, getByPlaceholderText } = render(
       <MemoryRouter>
-        <SearchForm
-          currentPage={"home"}
-          error={false}
-        />
+        <SearchForm currentPage={"home"} error={false} />
       </MemoryRouter>
     );
 
@@ -24,10 +21,7 @@ describe("SearchForm", () => {
   it("Should display a form with an input and a submit button, and an error message if the user enters a wrong query search word", () => {
     const { getByText, getByPlaceholderText } = render(
       <MemoryRouter>
-        <SearchForm
-          currentPage={"home"}
-          error={true}
-        />
+        <SearchForm currentPage={"home"} error={true} />
       </MemoryRouter>
     );
 

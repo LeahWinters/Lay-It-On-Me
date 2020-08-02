@@ -1,15 +1,14 @@
-import React from 'react';
-import SavedAdviceCard from './SavedAdviceCard';
-import '@testing-library/jest-dom';
-import { render } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import React from "react";
+import SavedAdviceCard from "./SavedAdviceCard";
+import { render } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
 
 describe("SavedAdviceCard", () => {
-  it('Should saved display advice and a delete advice button', () => {
+  it("Should saved display advice and a delete advice button", () => {
     const { getByText } = render(
       <MemoryRouter>
-        <SavedAdviceCard 
-          advice={'Never waste an opportunity to tell someone you love them.'}
+        <SavedAdviceCard
+          advice={"Never waste an opportunity to tell someone you love them."}
           id={32}
           key={32}
         />
@@ -21,6 +20,5 @@ describe("SavedAdviceCard", () => {
 
     expect(advice).toBeInTheDocument();
     expect(deleteBtn).toBeInTheDocument();
-
   });
-})
+});
