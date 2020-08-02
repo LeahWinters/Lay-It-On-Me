@@ -1,9 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import '@testing-library/jest-dom';
-// import ReactDOM from "react-dom";
-// import "@testing-library/jest-dom/extend-expect";
-import { render, fireEvent, waitFor } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
 describe("Header", () => {
