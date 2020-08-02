@@ -1,6 +1,6 @@
 import React from 'react';
 import '@testing-library/jest-dom';
-import { render, fireEvent, waitFor } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import SavedAdviceContainer from './SavedAdviceContainer';
 
@@ -17,7 +17,7 @@ describe("SavedAdviceContainer", () => {
   });
 
   it('Should display advice cards if advice has been saved', async () => {
-    const { getByText } = render(
+    const { getByText, getAllByText } = render(
       <MemoryRouter>
         <SavedAdviceContainer
           savedAdvice={ mockSavedAdvice }
@@ -27,9 +27,11 @@ describe("SavedAdviceContainer", () => {
 
     const advice1 = await waitFor(() => getByText('Alway do anything for love', {exact: false}));
     const advice2 = await waitFor(() => getByText('Be a good', {exact: false}));
+    const deleteBtn = await waitFor(() => getAllByText('Delete Advice'));
 
     expect(advice1).toBeInTheDocument();
     expect(advice2).toBeInTheDocument();
+    expect(deleteBtn.length).toBeLessThanOrEqual(3);
 
   });
 })
