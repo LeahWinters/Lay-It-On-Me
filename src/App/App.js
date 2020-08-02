@@ -36,7 +36,6 @@ class App extends Component {
     this.setState({savedAdvice: updatedSavedAdvice})
   }
 
-
   render() {
     return (
       <div className="App">
@@ -48,8 +47,8 @@ class App extends Component {
                 <div className="saved-advice-page">
                   <Header />
                   <SavedAdviceContainer 
-                    savedAdvice={this.state.savedAdvice}
-                    deleteSavedAdvice={this.deleteSavedAdvice}
+                    savedAdvice={ this.state.savedAdvice }
+                    deleteSavedAdvice={ this.deleteSavedAdvice }
                   />
                 </div>
               )}
@@ -59,9 +58,7 @@ class App extends Component {
               component={() => (
                 <div className="random-advice-page">
                   <Header />
-                  <RandomAdvice 
-                    grabRandomAdvice= {this.grabRandomAdvice}
-                  />
+                  <RandomAdvice />
                 </div>
               )}
             />
