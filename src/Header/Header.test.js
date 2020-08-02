@@ -12,7 +12,7 @@ describe("Header", () => {
       </MemoryRouter>
     );
 
-    const title = getByText("Lay It On Me");
+    const title = getByText("Solicited Advice");
     const randomBtn = getByText("Random Advice");
     const savedBtn = getByText("Saved Advice");
 
