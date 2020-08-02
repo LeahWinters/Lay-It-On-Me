@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getRandomAdvice } from '../apiCalls'
+import { getRandomAdvice } from '../apiCalls';
 import "./RandomAdvice.css";
 
 class RandomAdvice extends Component {
