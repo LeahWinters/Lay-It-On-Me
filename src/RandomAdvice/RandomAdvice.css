@@ -1,8 +1,9 @@
 .random {
-  background-color: #96897B;
+  background-color: #6F7868;
   display: flex;
   justify-content: center;
   height: 100vh;
   font-size: 24px;
-  padding-top: 6%;
+  font-weight: bold;
+  padding-top: 10%;
 }
