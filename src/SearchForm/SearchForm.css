@@ -1,12 +1,12 @@
 .SearchForm {
-  background-color: #6F7868;
+  background-color: #6f7868;
   display: flex;
   justify-content: center;
   height: 100vh;
 }
 
 .search-form {
-  background-color: #F5F9E9;
+  background-color: #f5f9e9;
   border: solid 4px #011627;
   border-radius: 7px;
   display: flex;
@@ -19,7 +19,7 @@
 
 .search-input {
   align-self: center;
-  background-color: #DBB4A9;
+  background-color: #dbb4a9;
   border-radius: 7px;
   border: solid 3px #011627;
   font-size: 20px;
@@ -34,7 +34,7 @@
   border-radius: 7px;
   border: solid 3px #011627;
   cursor: pointer;
-  color: #F5F9E9;
+  color: #f5f9e9;
   font-size: 18px;
   font-weight: bold;
   margin-top: 2%;
@@ -43,5 +43,5 @@
 }
 
 .submit-search-btn:hover {
-  background-color: #B55340;
+  background-color: #b55340;
 }

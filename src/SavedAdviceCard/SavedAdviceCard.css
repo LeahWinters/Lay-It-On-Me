@@ -1,6 +1,6 @@
 .saved-advice-card {
   align-items: center;
-  background-color: #DBB4A9;
+  background-color: #dbb4a9;
   border: solid 3px #011627;
   border-radius: 7px;
   display: flex;
@@ -22,12 +22,12 @@
   border-radius: 7px;
   border: solid 3px #011627;
   cursor: pointer;
-  color: #F5F5F5;
+  color: #f5f5f5;
   font-size: 18px;
   font-weight: bold;
   padding: 1.5%;
 }
 
 .delete-saved-btn:hover {
-  background-color: #B55340;
+  background-color: #b55340;
 }
