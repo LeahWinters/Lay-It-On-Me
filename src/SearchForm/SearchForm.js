@@ -7,7 +7,7 @@ class SearchForm extends Component {
     super(props);
     this.state = {
       searchValue: "",
-      error: false
+      error: false,
     };
   }
 
@@ -23,10 +23,14 @@ class SearchForm extends Component {
 
   render() {
     if (this.props.searchedAdvice === undefined) {
-      this.state.error = true
-    } else if (this.props.searchedAdvice.length > 0 && this.props.currentPage === 'results') {
+      // this.setState({ error: true })
+      this.state.error = true;
+    } else if (
+      this.props.searchedAdvice.length > 0 &&
+      this.props.currentPage === "results"
+    ) {
       return <Redirect to="/results" />;
-    } 
+    }
 
     return (
       <div className="SearchForm">
@@ -46,7 +50,11 @@ class SearchForm extends Component {
           >
             Lay It On Me!
           </button>
-          { this.state.error && <div><h2>Sorry, I can't help with that</h2></div> }
+          {this.state.error && (
+            <div>
+              <h2 className="sorry-error">Sorry, I can't help with that</h2>
+            </div>
+          )}
         </form>
       </div>
     );

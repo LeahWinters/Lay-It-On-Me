@@ -28,8 +28,7 @@ class App extends Component {
   };
 
   saveAdvice = (obj) => {
-    const adviceToSave = this.state.savedAdvice.push(obj);
-    console.log("app", this.state.savedAdvice);
+    this.state.savedAdvice.push(obj);
   };
 
   deleteSavedAdvice = (obj) => {
@@ -61,9 +60,7 @@ class App extends Component {
               component={() => (
                 <div className="random-advice-page">
                   <Header />
-                  <RandomAdvice 
-                    saveAdvice={this.saveAdvice}
-                  />
+                  <RandomAdvice saveAdvice={this.saveAdvice} />
                 </div>
               )}
             />
