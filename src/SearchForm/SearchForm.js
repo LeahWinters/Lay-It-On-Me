@@ -23,6 +23,7 @@ class SearchForm extends Component {
 
   render() {
     if (this.props.searchedAdvice === undefined) {
+      // this.setState({ error: true })
       this.state.error = true;
     } else if (
       this.props.searchedAdvice.length > 0 &&
@@ -51,7 +52,7 @@ class SearchForm extends Component {
           </button>
           {this.state.error && (
             <div>
-              <h2>Sorry, I can't help with that</h2>
+              <h2 className="sorry-error">Sorry, I can't help with that</h2>
             </div>
           )}
         </form>

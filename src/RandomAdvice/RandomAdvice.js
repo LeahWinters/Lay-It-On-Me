@@ -29,7 +29,6 @@ class RandomAdvice extends Component {
             <button
               type="button"
               className="add-fav-btn"
-              type="button"
               onClick={() => this.props.saveAdvice(this.state.random.slip)}
             >
               Save Advice

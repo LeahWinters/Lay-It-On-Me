@@ -45,3 +45,7 @@
 .submit-search-btn:hover {
   background-color: #b55340;
 }
+
+.sorry-error {
+  margin-top: 3%;
+}
