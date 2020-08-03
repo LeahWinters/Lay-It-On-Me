@@ -1,7 +1,7 @@
 .saved-advice-card {
   align-items: center;
-  background-color: #CF995F;
-  border: solid 2px #003249;
+  background-color: #DBB4A9;
+  border: solid 3px #011627;
   border-radius: 7px;
   display: flex;
   flex-direction: column;
@@ -12,22 +12,22 @@
 }
 
 .advice {
-  color: #003249;
+  color: #011627;
   font-size: 23px;
   width: 400px;
 }
 
 .delete-saved-btn {
-  background-color: #628395;
+  background-color: #994636;
   border-radius: 7px;
-  border-color: #003249;
+  border: solid 3px #011627;
   cursor: pointer;
   color: #F5F5F5;
   font-size: 18px;
+  font-weight: bold;
   padding: 1.5%;
 }
 
 .delete-saved-btn:hover {
-  background-color: #DFD5A5;
-  color: #003249;
+  background-color: #B55340;
 }

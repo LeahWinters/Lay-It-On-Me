@@ -1,6 +1,6 @@
 .Header {
   align-items: center;
-  background-color: #F5F5F5;
+  background-color: #F5F9E9;
   display: flex;
   flex-direction: row;
   height: 10%;
@@ -10,7 +10,7 @@
 }
 
 .title {
-  color: #003249;
+  color: #011627;
   font-size: 35px;
   margin-left: 4%;
   text-decoration: none;
@@ -22,24 +22,24 @@
   height: 50%;
   justify-content: space-evenly;
   margin-right: 1%;
-  width: 360px;
+  width: 390px;
 }
 
 .random-btn,
 .saved-advice-btn {
-  background-color: #628395;
-  border-color: #003249;
+  background-color: #994636;
+  border: solid 3px #011627;
   border-radius: 7px;
   color: #F5F5F5;
   cursor: pointer;
   font-size: 20px;
+  font-weight: bold;
   height: 100%;
-  width: 160px;
+  width: 170px;
 }
 
 
 .random-btn:hover,
 .saved-advice-btn:hover {
-  background-color: #DFD5A5;
-  color: #003249;
+  background-color: #B55340;
 }
