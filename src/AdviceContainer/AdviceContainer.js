@@ -5,8 +5,8 @@ import AdviceCard from "../AdviceCard/AdviceCard";
 const AdviceContainer = ({ searchedAdvice, saveAdvice }) => {
   const arrayToDisplay = searchedAdvice.map((slip) => {
     return (
-      <AdviceCard 
-        advice={slip.advice} 
+      <AdviceCard
+        advice={slip.advice}
         id={slip.id}
         key={slip.id}
         saveAdvice={saveAdvice}
@@ -15,11 +15,7 @@ const AdviceContainer = ({ searchedAdvice, saveAdvice }) => {
     );
   });
 
-  return (
-    <section className="advice-container">
-      {arrayToDisplay}
-    </section>
-  );
+  return <section className="advice-container">{arrayToDisplay}</section>;
 };
 
 export default AdviceContainer;
