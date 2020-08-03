@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent, waitFor, waitForDomChange, getByText } from "@testing-library/react";
+import { render, fireEvent, waitFor } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import App from "./App";
 import { getSearchResults, getRandomAdvice } from "../apiCalls";
@@ -157,8 +157,35 @@ describe("App", () => {
 
   });
 
-  it.skip('Should be brought back to the home page when user clicks Solicited Advice', async () => {
+  it.skip('Should be brought back to the home page, from random page, when user clicks Solicited Advice', async () => {
+    getRandomAdvice.mockResolvedValueOnce(mockGetRandomAdvice);
 
+    const { getByText, getByPlaceholderText } = render(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>
+    );
+
+    const randomBtn = getByText('Random Advice');
+    const homeBtn = getByText('Solicited Advice');
+    
+    fireEvent.click(randomBtn);
+
+    const advice = await waitFor(() =>
+      getByText("Just because you", { exact: false })
+    );
+
+    fireEvent.click(homeBtn);
+
+    const input = await waitFor(() => {
+      getByPlaceholderText("What's troubling you Hun?");
+    });
+    const submitBtn = await waitFor(() => {
+      getByText("Lay It On Me!");
+    });
+
+    expect(input).toBeInTheDocument();
+    expect(submitBtn).toBeInTheDocument();
   });
 
 });
